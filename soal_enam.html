@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 6</title>
+</head>
+<body>
+    <label for="input">Input</label>
+    <input type="text" id="input" placeholder="Input " required>
+    <br>
+    <br>
+    <button type="button" id="btnInput">Check</button>
+    <p id="text"></p>
+    <script>
+        const typ = document.getElementById('input');
+        const txt = document.getElementById('text');
+        const btn = document.getElementById('btnInput')
+        
+        btn.addEventListener("click", () => {
+            if(typ.value.toUpperCase() == "10MP") {
+                txt.innerHTML = "kamera"
+            }
+            else if(typ.value.toUpperCase() == "128GB") {
+                txt.innerHTML = "Memory"
+            }
+        })
+    </script>
+</body>
+</html>

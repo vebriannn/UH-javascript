@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 2</title>
+</head>
+<body>
+    <input type="text" name="" id="input" placeholder="Input Nilai" required>
+    <button type="button" id="btnInput">Input</button>
+    <p id="text"></p>
+    <script>
+
+        const nilai = document.getElementById('input');
+        const p = document.getElementById('text');
+        const btn = document.getElementById('btnInput')
+        
+        btn.addEventListener("click", () => {
+            if(nilai.value >= 80) {
+                p.innerHTML = "SANGAT MEMUASAKAN";
+            }
+            else if(nilai.value >= 60 && nilai.value < 80) {
+                p.innerHTML = "MEMUASAKAN";
+            }
+            else if (nilai.value < 60){
+                p.innerHTML = "JANGAN MENYERAH COBA LAGI!";
+            }
+
+            // check nilai via console log
+            console.log(nilai.value)
+        })
+        
+    </script>
+</body>
+</html>

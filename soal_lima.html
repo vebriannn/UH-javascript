@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 5</title>
+</head>
+<body>
+    <label for="input">Input</label>
+    <input type="text" id="input" placeholder="Input " required>
+    <br>
+    <br>
+    <button type="button" id="btnInput">Check</button>
+    <p id="text"></p>
+    <script>
+        const typ = document.getElementById('input');
+        const txt = document.getElementById('text');
+        const btn = document.getElementById('btnInput')
+        
+        btn.addEventListener("click", () => {
+            if(typ.value.toLowerCase() == "kucing") {
+                txt.innerHTML = "meong"
+            }
+            else if(typ.value.toLowerCase() == "anjing") {
+                txt.innerHTML = "guguk"
+            }
+        })
+    </script>
+</body>
+</html>

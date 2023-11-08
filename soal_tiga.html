@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+</head>
+<body>
+    <label for="inputAlas">Alas Segitiga</label>
+    <input type="text" id="inputAlas" placeholder="Input Alas" required>
+    <br>
+    <label for="inputTinggi">Tinggi Segitiga</label>
+    <input type="text" id="inputTinggi" placeholder="Input Tinggi" required>
+    <br>
+    <br>
+    <button type="button" id="btnInput">Hitung</button>
+    <p id="text"></p>
+    <script>
+
+        const alas = document.getElementById('inputAlas');
+        const tinggi = document.getElementById('inputTinggi');
+        const p = document.getElementById('text');
+        const btn = document.getElementById('btnInput')
+        
+        btn.addEventListener("click", () => {
+            const hasilLuas = 0.5 * parseInt(alas.value) * parseInt(tinggi.value);
+            p.innerHTML = "Hasil Luas Segitiga Adalah: " + hasilLuas + " cm²";
+            
+        })
+        
+    </script>
+</body>
+</html>
